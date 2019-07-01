@@ -10,10 +10,10 @@ export class UserService {
     constructor(private http: HttpClient) { }
 
     getAllPatientUnvalided() {
-        return this.http.get<User[]>("https://scholahealth.herukuapp.com/patients/ko");
+        return this.http.get<User[]>("https://scholahealth.herokuapp.com/patients/ko");
     }
       getAllPAactivite(idm:number) {
-        return this.http.get<Activite[]>("https://scholahealth.herukuapp.com/ActivitePatient/"+idm);
+        return this.http.get<Activite[]>("https://scholahealth.herokuapp.com/ActivitePatient/"+idm);
     }
 
     getById(id: number) {
@@ -22,15 +22,15 @@ export class UserService {
 
 
     getAllPatientValided() {
-        return this.http.get<User[]>("https://scholahealth.herukuapp.com/patients");
+        return this.http.get<User[]>("https://scholahealth.herokuapp.com/patients");
     }
 
      getAllMedecins() {
-        return this.http.get<User[]>("https://scholahealth.herukuapp.com/medecins");
+        return this.http.get<User[]>("https://scholahealth.herokuapp.com/medecins");
     }
 
     register(user: User) {
-        return this.http.post("https://scholahealth.herukuapp.com/patient", user);
+        return this.http.post("https://scholahealth.herokuapp.com/patient", user);
     }
 
     update(user: User) {
@@ -41,4 +41,3 @@ export class UserService {
         return this.http.delete(`/users/` + id);
     }
 }
-    

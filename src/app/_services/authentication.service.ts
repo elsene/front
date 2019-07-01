@@ -36,7 +36,7 @@ export class AuthenticationService {
 
 
     loginMedecin(username: string, password: string) {
-        return this.http.get<any>("https://scholahealth.herukuapp.com/medecin/"+username+"/"+password)
+        return this.http.get<any>("https://scholahealth.herokuapp.com/medecin/"+username+"/"+password)
             .pipe(map(user => {
                 // login successful if there's a jwt token in the response
                 console.log("ok"+user);
@@ -53,7 +53,7 @@ export class AuthenticationService {
     }
 
     loginAdministtateur(username: string, password: string) {
-        return this.http.get<any>("https://scholahealth.herukuapp.com/administrateur/"+username+"/"+password)
+        return this.http.get<any>("https://scholahealth.herokuapp.com/administrateur/"+username+"/"+password)
             .pipe(map(user => {
                 // login successful if there's a jwt token in the response
                 if (user && user.token) {
