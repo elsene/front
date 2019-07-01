@@ -1,0 +1,75 @@
+<h3>Dashboard</h3>
+<br>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+
+
+<main>
+
+  
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Liste des patients</label>
+
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Suivie de mes patients</label>
+
+  
+
+
+  <section id="content2">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Email</th>
+      <th scope="col">Numero</th>
+
+    </tr>
+  </thead>
+  <tbody  *ngFor="let user of patientsValided">
+    <tr>
+      <td>{{user.nom}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.numero_telephone}}</td>
+    </tr>
+  </tbody>
+</table>
+
+   
+  </section>
+
+  <section id="content3">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Date</th>
+            <th scope="col">Duree</th>
+      <th scope="col">Type activite</th>
+      <th scope="col">Position</th>
+
+
+    </tr>
+  </thead>
+  <tbody  *ngFor="let user of activites">
+    <tr>
+      <td>{{user.nom}}</td>
+      <td>{{user.prenom}}</td>
+      <td>{{user.jours}}</td>
+            <td>{{user.duree_activite}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.position}}</td>
+
+
+    </tr>
+  </tbody>
+</table>
+
+   
+  </section>
+
+  
+
+</main>
