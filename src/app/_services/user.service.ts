@@ -41,3 +41,4 @@ export class UserService {
         return this.http.delete(`/users/` + id);
     }
 }
+    
